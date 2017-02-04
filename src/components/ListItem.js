@@ -4,6 +4,7 @@ import { CardSection } from './common';
 
 class ListItem extends Component {
   render() {
+    console.log('list item called', this.props);
     return (
       <CardSection>
         <Text>{this.props.library.title}</Text>
