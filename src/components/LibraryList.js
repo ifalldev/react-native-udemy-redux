@@ -9,16 +9,13 @@ class LibraryList extends Component {
       rowHasChanged: (r1, r2) => r1 !== r2
     });
     this.dataSource = ds.cloneWithRows(this.props.libraries);
-    console.log('library list will mount test', this.dataSource);
   }
 
   renderRow(library) {
-    console.log('render row test', library);
     return <ListItem library={library} />;
   }
 
   render() {
-    console.log(this.props);
     return (
       <ListView
         dataSource={this.dataSource}
